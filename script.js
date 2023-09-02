@@ -104,12 +104,6 @@ productCards.forEach((productCard) => {
     }
   });
 });
-document.getElementById("btn").addEventListener("click", function() {
-  var nomorWa = "62895323449673";
-  var pesan = "Halo, ini pesan yang dikirim dari website!";
-  
-  var url = "http://WA.me/6289666438586" + nomorWa + "&text=" + encodeURIComponent(pesan);
-  window.open(url);
 });
 <!-- My Javascript -->
   // Feather Icons
@@ -154,6 +148,25 @@ document.getElementById("btn").addEventListener("click", function() {
     newItem.innerHTML = itemContent;
 
     shoppingCart.appendChild(newItem);
+
+    function kirimWhatsApp() {
+            // Mengambil data dari input
+            var nama = document.getElementById("namaInput").value;
+            var email = document.getElementById("emailInput").value;
+            var noHP = document.getElementById("noHPInput").value;
+
+            // Format pesan yang ingin Anda kirim
+            var pesan = "Nama: " + nama + "\nEmail: " + email + "\nNo HP: " + noHP;
+
+            // Ganti nomor WhatsApp dengan nomor tujuan Anda
+            var nomorWhatsApp = "0895323449673";
+
+            // Membuat URL untuk mengirim pesan WhatsApp
+            var waURL = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" + encodeURIComponent(pesan);
+
+            // Buka tautan WhatsApp dalam tab baru
+            window.open(waURL);
+    }
 
     // Tambahkan event listener untuk tombol "remove-item" pada item baru
     newItem.querySelector('.remove-item').addEventListener('click', () => {
