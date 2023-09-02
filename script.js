@@ -159,7 +159,7 @@ productCards.forEach((productCard) => {
             var pesan = "Nama: " + nama + "\nEmail: " + email + "\nNo HP: " + noHP;
 
             // Ganti nomor WhatsApp dengan nomor tujuan Anda
-            var nomorWhatsApp = "0895323449673";
+            var nomorWhatsApp = "";
 
             // Membuat URL untuk mengirim pesan WhatsApp
             var waURL = "https://api.whatsapp.com/send?phone=" + nomorWhatsApp + "&text=" + encodeURIComponent(pesan);
