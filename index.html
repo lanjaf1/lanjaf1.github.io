@@ -276,22 +276,21 @@
           referrerpolicy="no-referrer-when-downgrade"
           class="map"
         ></iframe>
-
-        <form action="">
-          <div class="input-group">
+<form action="#" id="formWhatsApp">
+        <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama" />
-          </div>
-          <div class="input-group">
+            <input type="text" placeholder="Nama" id="namaInput" />
+        </div>
+        <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="email" />
-          </div>
-          <div class="input-group">
+            <input type="text" placeholder="Email" id="emailInput" />
+        </div>
+        <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="no hp" />
-          </div>
-          <button type="submit" class="btn" id="btn" ng-click="submitForm()">kirim pesan</button>
-        </form>
+            <input type="text" placeholder="No HP" id="noHPInput" />
+        </div>
+        <button type="button" class="btn" id="btn" onclick="kirimWhatsApp()">Kirim Pesan</button>
+</form>
       </div>
     </section>
     <!-- Contact Section end -->
